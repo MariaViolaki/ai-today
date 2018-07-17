@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AI Today</string>
+    <string name="no_articles">Couldn\'t find articles\nabout Artificial Intelligence</string>
+    <string name="no_connection">There is no\nInternet connection</string>
+</resources>

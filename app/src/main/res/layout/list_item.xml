@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:cacheColorHint="@android:color/transparent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/section"
+        style="@style/SectionStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/small_space"
+        android:paddingEnd="@dimen/medium_space"
+        android:paddingStart="@dimen/medium_space"
+        android:paddingTop="@dimen/small_space" />
+
+    <TextView
+        android:paddingStart="@dimen/small_space"
+        android:paddingEnd="@dimen/small_space"
+        android:id="@+id/title"
+        style="@style/TitleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/DateStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/medium_space"
+        android:paddingStart="@dimen/medium_space"
+        android:paddingTop="@dimen/medium_space"
+        android:paddingBottom="@dimen/small_space" />
+
+</LinearLayout>
