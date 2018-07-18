@@ -21,7 +21,7 @@ public class ArticleActivity extends AppCompatActivity
         implements LoaderManager.LoaderCallbacks<List<Article>> {
 
     private static final String ARTICLE_REQUEST_URL =
-            "https://content.guardianapis.com/search?q=%22artificial%20intelligence%22&api-key=1e5d5e05-66fd-49b5-85c0-cf26d845cb67";
+            "https://content.guardianapis.com/search?q=%22artificial%20intelligence%22&show-tags=contributor&api-key=1e5d5e05-66fd-49b5-85c0-cf26d845cb67";
     private ArticleAdapter mArticleAdapter;
     private TextView mDefaultView;
 

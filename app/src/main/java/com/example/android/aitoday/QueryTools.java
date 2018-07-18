@@ -21,6 +21,8 @@ import java.util.List;
 public class QueryTools {
 
     private static final String LOG_TAG = QueryTools.class.getSimpleName();
+    private static final int READ_TIMEOUT = 10000;
+    private static final int CONNECT_TIMEOUT = 15000;
 
     private QueryTools() {
     }
@@ -32,8 +34,7 @@ public class QueryTools {
 
         try {
             jsonResponse = requestData(url);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             Log.e(LOG_TAG, "Problem fetching data.", e);
         }
 
@@ -66,8 +67,8 @@ public class QueryTools {
 
         try {
             urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setReadTimeout(10000);
-            urlConnection.setConnectTimeout(15000);
+            urlConnection.setReadTimeout(READ_TIMEOUT);
+            urlConnection.setConnectTimeout(CONNECT_TIMEOUT);
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
 
@@ -129,11 +130,17 @@ public class QueryTools {
                 String date = currentArticle.getString("webPublicationDate");
                 String url = currentArticle.getString("webUrl");
 
-                Article article = new Article(title, section, date, url);
+                String author = "";
+                JSONArray tagsArray = currentArticle.getJSONArray("tags");
+                if (tagsArray != null && tagsArray.length() > 0 ) {
+                    JSONObject tagsObject = tagsArray.getJSONObject(0);
+                    author = tagsObject.getString("webTitle");
+                }
+
+                Article article = new Article(title, section, date, author, url);
                 articles.add(article);
-        }
-        }
-        catch (JSONException e) {
+            }
+        } catch (JSONException e) {
             Log.e(LOG_TAG, "Problem extracting data.", e);
         }
 

@@ -5,13 +5,15 @@ public class Article {
     private String mTitle;
     private String mSection;
     private String mDate;
+    private String mAuthor;
     private String mUrl;
 
     // Create a constructor for an Article object
-    public Article(String title, String section, String date, String url) {
+    public Article(String title, String section, String date, String author, String url) {
         mTitle = title;
         mSection = section;
         mDate = date;
+        mAuthor = author;
         mUrl = url;
     }
 
@@ -25,6 +27,10 @@ public class Article {
 
     public String getDate() {
         return mDate;
+    }
+
+    public String getAuthor() {
+        return mAuthor;
     }
 
     public String getUrl() {

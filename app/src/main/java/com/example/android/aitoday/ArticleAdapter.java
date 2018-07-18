@@ -35,6 +35,9 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
         TextView dateView = convertView.findViewById(R.id.date);
         dateView.setText(formatDate(currentArticle.getDate()));
 
+        TextView authorView = convertView.findViewById(R.id.author);
+        authorView.setText(currentArticle.getAuthor());
+
         return convertView;
     }
 

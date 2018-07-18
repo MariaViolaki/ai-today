@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/transparent"
@@ -19,24 +20,46 @@
         android:paddingBottom="@dimen/small_space"
         android:paddingEnd="@dimen/medium_space"
         android:paddingStart="@dimen/medium_space"
-        android:paddingTop="@dimen/small_space" />
+        android:paddingTop="@dimen/small_space"
+        tools:text="Section" />
 
     <TextView
-        android:paddingStart="@dimen/small_space"
-        android:paddingEnd="@dimen/small_space"
         android:id="@+id/title"
         style="@style/TitleStyle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/small_space"
+        android:paddingStart="@dimen/small_space"
+        tools:text="This is the Title of the Article" />
 
-    <TextView
-        android:id="@+id/date"
-        style="@style/DateStyle"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/small_space"
         android:paddingEnd="@dimen/medium_space"
         android:paddingStart="@dimen/medium_space"
-        android:paddingTop="@dimen/medium_space"
-        android:paddingBottom="@dimen/small_space" />
+        android:paddingTop="@dimen/medium_space">
+
+        <TextView
+            android:id="@+id/author"
+            style="@style/DefaultStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Name Surname" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/DefaultStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1 Jan 2018" />
+
+    </LinearLayout>
 
 </LinearLayout>

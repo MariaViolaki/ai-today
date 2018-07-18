@@ -23,7 +23,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="DateStyle">
+    <style name="DefaultStyle">
         <item name="android:fontFamily">@font/teen</item>
         <item name="android:gravity">end</item>
         <item name="android:textAllCaps">true</item>
