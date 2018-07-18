@@ -6,6 +6,16 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+        <item name="android:itemBackground">@color/colorPrimaryDark</item>
+        <item name="android:alertDialogTheme">@style/DialogTheme</item>
+        <item name="android:fontFamily">@font/teen</item>
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+    <style name="DialogTheme">
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:windowIsFloating">true</item>
     </style>
 
     <style name="SectionStyle">

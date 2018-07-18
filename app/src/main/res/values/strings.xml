@@ -2,4 +2,22 @@
     <string name="app_name">AI Today</string>
     <string name="no_articles">Couldn\'t find articles\nabout Artificial Intelligence</string>
     <string name="no_connection">There is no\nInternet connection</string>
+    <string name="settings_label">Article Settings</string>
+    <string name="settings_menu">Settings</string>
+
+    <!--Order By Preference-->
+    <string name="articles_order_label">Order By</string>
+    <string name="articles_order_key">order_by</string>
+    <string name="articles_order_default">@string/articles_relevance_value</string>
+
+    <string name="articles_relevance_label">Relevance</string>
+    <string name="articles_relevance_value">relevance</string>
+
+    <string name="articles_newest_label">Newest</string>
+    <string name="articles_newest_value">newest</string>
+
+    <!--Number of Articles Preference-->
+    <string name="articles_number_label">Number of Articles</string>
+    <string name="articles_number_key">articles_number</string>
+    <string name="articles_number_default">10</string>
 </resources>

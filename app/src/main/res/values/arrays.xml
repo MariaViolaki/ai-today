@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="articles_order_labels">
+        <item>@string/articles_relevance_label</item>
+        <item>@string/articles_newest_label</item>
+    </string-array>
+
+    <string-array name="articles_order_values">
+        <item>@string/articles_relevance_value</item>
+        <item>@string/articles_newest_value</item>
+    </string-array>
+</resources>

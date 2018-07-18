@@ -18,6 +18,8 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.net.HttpURLConnection.HTTP_OK;
+
 public class QueryTools {
 
     private static final String LOG_TAG = QueryTools.class.getSimpleName();
@@ -72,7 +74,7 @@ public class QueryTools {
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
 
-            if (urlConnection.getResponseCode() == 200) {
+            if (urlConnection.getResponseCode() == HTTP_OK) {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = convertResponse(inputStream);
             }
@@ -132,7 +134,7 @@ public class QueryTools {
 
                 String author = "";
                 JSONArray tagsArray = currentArticle.getJSONArray("tags");
-                if (tagsArray != null && tagsArray.length() > 0 ) {
+                if (tagsArray != null && tagsArray.length() > 0) {
                     JSONObject tagsObject = tagsArray.getJSONObject(0);
                     author = tagsObject.getString("webTitle");
                 }
